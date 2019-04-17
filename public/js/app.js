@@ -26,11 +26,11 @@ weatherForm.addEventListener('submit',(e)=>{
       }
       else {
         //console.log(data.address);
-        //console.log(data.temperature);
-        //console.log(data.apparentTemperature);
+        //console.log(data.dayMax);
+        //console.log(data.dayMin);
         messageOne.textContent = 'Address: '+data.address;
-        messageTwo.textContent = 'Actual temperature is '+data.temperature;
-        messageThree.textContent = 'It feels like '+data.apparentTemperature;
+        messageTwo.textContent = 'Actual temperature is '+data.temperature + '. It feels like '+data.apparentTemperature + '. ';
+        messageThree.textContent = 'Today\'s Maximum temprature  is '+ data.dayMax+ ' and minimum is '+data.dayMin + '.';
       }
     })
   })

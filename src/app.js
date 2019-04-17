@@ -64,10 +64,13 @@ app.get('/weather',(req, res)=>{
           res.send({error:errorMessageW})
         } else {
           //console.log(`It's currently ${weatherResults.temperature}. It feels like ${weatherResults.apparentTemperature}.`);
+          //console.log(weatherResults);
           res.send({
             address: results.address,
             temperature : weatherResults.temperature,
-            apparentTemperature : weatherResults.apparentTemperature
+            apparentTemperature : weatherResults.apparentTemperature,
+            dayMax: weatherResults.dayMax,
+            dayMin: weatherResults.dayMin
           })
         }
       });
